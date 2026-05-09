@@ -112,9 +112,23 @@ export function App() {
         )}
       </main>
 
-      <footer className="max-w-6xl mx-auto px-5 py-8 text-xs text-slate-500">
-        Seed data is hand-curated for prototype purposes. Schedule, prices, and content
-        are illustrative — not authoritative iRacing data.
+      <footer className="max-w-6xl mx-auto px-5 py-8 text-xs text-slate-500 space-y-1">
+        <p>
+          Schedule and catalog data sourced from{' '}
+          <a
+            href="https://github.com/adrianulima/my-racing-planner"
+            target="_blank"
+            rel="noreferrer"
+            className="underline hover:text-slate-300"
+          >
+            adrianulima/my-racing-planner
+          </a>{' '}
+          (MIT). Not affiliated with iRacing or iRacing.com Motorsport Simulations, LLC.
+        </p>
+        <p>
+          Data covers the current season plus four prior seasons. Popularity scores are
+          a heuristic, not real participation numbers.
+        </p>
       </footer>
     </div>
   )

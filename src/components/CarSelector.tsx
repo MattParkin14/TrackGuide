@@ -9,7 +9,7 @@ interface Props {
   onClear: () => void
 }
 
-const CATEGORIES: Category[] = ['sports_car', 'formula_car', 'oval', 'dirt_oval', 'dirt_road']
+const CATEGORIES: Category[] = ['sports_car', 'formula_car', 'oval', 'dirt_oval', 'dirt_road', 'road']
 
 export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
   const [query, setQuery] = useState('')

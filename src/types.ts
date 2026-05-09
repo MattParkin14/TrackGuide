@@ -1,9 +1,13 @@
+/** Car / series categories use the richer split (sports_car vs formula_car).
+ *  Track categories use 'road' as a single bucket covering both, since
+ *  iRacing physically licenses tracks per package, not per car class. */
 export type Category =
   | 'oval'
   | 'dirt_oval'
   | 'sports_car'
   | 'formula_car'
   | 'dirt_road'
+  | 'road'
 
 export type LicenseClass = 'R' | 'D' | 'C' | 'B' | 'A' | 'P'
 

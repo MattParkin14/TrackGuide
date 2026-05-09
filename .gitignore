@@ -11,6 +11,9 @@ dist-ssr
 .wrangler
 *.tsbuildinfo
 
+# Local mirror of upstream data sources (managed by scripts/sync-from-upstream.mjs)
+/.upstream
+
 # editors
 .idea
 .vscode/*

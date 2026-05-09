@@ -6,6 +6,7 @@ export const CATEGORY_LABEL: Record<Category, string> = {
   sports_car: 'Sports Car',
   formula_car: 'Formula',
   dirt_road: 'Dirt Road',
+  road: 'Road',
 }
 
 export function formatPrice(usd: number): string {
