@@ -2,8 +2,12 @@ import { useEffect, useMemo, useState } from 'react'
 import type { Dataset } from './types'
 import { loadDataset } from './lib/dataset'
 import { rankTracks, type RankMode } from './lib/recommend'
+import { findSeriesForCars } from './lib/series-finder'
 import { CarSelector } from './components/CarSelector'
 import { ResultsList } from './components/ResultsList'
+import { SeriesList } from './components/SeriesList'
+
+type View = 'tracks' | 'series'
 
 const RANK_MODES: { value: RankMode; label: string; helper: string }[] = [
   {
@@ -28,6 +32,7 @@ export function App() {
   const [error, setError] = useState<string | null>(null)
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [mode, setMode] = useState<RankMode>('weeks')
+  const [view, setView] = useState<View>('tracks')
 
   useEffect(() => {
     let cancelled = false
@@ -38,9 +43,14 @@ export function App() {
   }, [])
 
   const scores = useMemo(() => {
-    if (!dataset) return []
+    if (!dataset || view !== 'tracks') return []
     return rankTracks(dataset, [...selected], mode)
-  }, [dataset, selected, mode])
+  }, [dataset, selected, mode, view])
+
+  const seriesMatches = useMemo(() => {
+    if (!dataset || view !== 'series') return []
+    return findSeriesForCars(dataset, [...selected])
+  }, [dataset, selected, view])
 
   const toggle = (carId: string) => {
     setSelected((prev) => {
@@ -67,23 +77,25 @@ export function App() {
               iRacing track recommender
             </span>
           </div>
-          <div className="flex items-center gap-2">
-            <label htmlFor="rank-mode" className="text-xs text-slate-400 hidden sm:inline">
-              Rank by:
-            </label>
-            <select
-              id="rank-mode"
-              value={mode}
-              onChange={(e) => setMode(e.target.value as RankMode)}
-              className="bg-ink border border-edge rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-accent"
-            >
-              {RANK_MODES.map((m) => (
-                <option key={m.value} value={m.value}>{m.label}</option>
-              ))}
-            </select>
-          </div>
+          {view === 'tracks' && (
+            <div className="flex items-center gap-2">
+              <label htmlFor="rank-mode" className="text-xs text-slate-400 hidden sm:inline">
+                Rank by:
+              </label>
+              <select
+                id="rank-mode"
+                value={mode}
+                onChange={(e) => setMode(e.target.value as RankMode)}
+                className="bg-ink border border-edge rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-accent"
+              >
+                {RANK_MODES.map((m) => (
+                  <option key={m.value} value={m.value}>{m.label}</option>
+                ))}
+              </select>
+            </div>
+          )}
         </div>
-        {modeHelper && (
+        {view === 'tracks' && modeHelper && (
           <div className="max-w-6xl mx-auto px-5 pb-3 -mt-1 text-xs text-slate-500">
             {modeHelper}
           </div>
@@ -107,7 +119,25 @@ export function App() {
               onToggle={toggle}
               onClear={clear}
             />
-            <ResultsList scores={scores} mode={mode} />
+            <div className="flex flex-col gap-3">
+              <div
+                role="tablist"
+                aria-label="Result view"
+                className="inline-flex rounded-lg border border-edge bg-panel p-1 self-start"
+              >
+                <TabButton active={view === 'tracks'} onClick={() => setView('tracks')}>
+                  Tracks to buy
+                </TabButton>
+                <TabButton active={view === 'series'} onClick={() => setView('series')}>
+                  Series for my cars
+                </TabButton>
+              </div>
+              {view === 'tracks' ? (
+                <ResultsList scores={scores} mode={mode} />
+              ) : (
+                <SeriesList matches={seriesMatches} selectedCount={selected.size} />
+              )}
+            </div>
           </>
         )}
       </main>
@@ -131,5 +161,32 @@ export function App() {
         </p>
       </footer>
     </div>
+  )
+}
+
+function TabButton({
+  active,
+  onClick,
+  children,
+}: {
+  active: boolean
+  onClick: () => void
+  children: React.ReactNode
+}) {
+  return (
+    <button
+      type="button"
+      role="tab"
+      aria-selected={active}
+      onClick={onClick}
+      className={
+        'px-3 py-1.5 rounded-md text-sm transition ' +
+        (active
+          ? 'bg-ink text-accent border border-accent/40'
+          : 'text-slate-400 hover:text-slate-200')
+      }
+    >
+      {children}
+    </button>
   )
 }

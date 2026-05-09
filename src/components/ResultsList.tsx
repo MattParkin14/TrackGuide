@@ -38,14 +38,29 @@ export function ResultsList({ scores, mode }: Props) {
             className="rounded-xl border border-edge bg-ink/60 p-4 flex flex-col md:flex-row md:items-start md:justify-between gap-3"
           >
             <div className="flex-1">
-              <div className="flex items-baseline gap-2">
+              <div className="flex items-baseline gap-2 flex-wrap">
                 <span className="text-slate-500 text-sm font-mono w-6">{idx + 1}.</span>
                 <h3 className="text-base font-semibold text-slate-100">{s.track.name}</h3>
-                <span className="text-xs text-slate-500">{formatPrice(s.track.price)}</span>
+                {s.track.isFree ? (
+                  <span className="px-2 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 text-[10px] uppercase tracking-wider font-semibold">
+                    Base content
+                  </span>
+                ) : (
+                  <span className="text-xs text-slate-500">{formatPrice(s.track.price)}</span>
+                )}
               </div>
               {s.matchingConfigs.length > 0 && (
                 <p className="text-xs text-slate-400 mt-1 ml-8">
-                  Configs used: {s.matchingConfigs.map((c) => c.name).join(' · ')}
+                  Configs used:{' '}
+                  {s.matchingConfigs.map((c, i) => (
+                    <span key={c.id}>
+                      {i > 0 && ' · '}
+                      <span>{c.name}</span>
+                      {c.isFree && !s.track.isFree && (
+                        <span className="ml-1 text-emerald-400 text-[10px] uppercase tracking-wider">free</span>
+                      )}
+                    </span>
+                  ))}
                 </p>
               )}
               {s.upcomingSeriesNames.length > 0 && (

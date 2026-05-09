@@ -77,7 +77,11 @@ async function readUpstreamFile(sha, relPath) {
 /** Adrian's track entries are flat (one row per track-config). Group by
  *  parent track name into our Track { configs[] } shape. */
 function transformTracks(adrianTracksObj) {
-  const arr = Object.values(adrianTracksObj)
+  const arr = Object.values(adrianTracksObj).map((t) => ({
+    ...t,
+    name: typeof t.name === 'string' ? t.name.trim() : t.name,
+    config: typeof t.config === 'string' ? t.config.trim() : t.config,
+  }))
   const groups = new Map() // name -> entries[]
   for (const t of arr) {
     const key = t.name
@@ -126,7 +130,7 @@ function transformCars(adrianCarsObj) {
   return arr
     .map((c) => ({
       id: `car_${c.id}`,
-      name: c.name,
+      name: typeof c.name === 'string' ? c.name.trim() : c.name,
       price: c.price ?? 0,
       category: mapCarCategory(c.categories?.[0] ?? 'sports_car'),
       licenseClass: 'D', // upstream doesn't expose per-car license; D is a safe display default

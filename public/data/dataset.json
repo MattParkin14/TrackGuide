@@ -1692,25 +1692,8 @@
       ]
     },
     {
-      "id": "trk_557",
-      "name": "Charlotte Motor Speedway",
-      "price": 0,
-      "category": "oval",
-      "isFree": true,
-      "configs": [
-        {
-          "id": "cfg_557",
-          "parentTrackId": "trk_557",
-          "name": "Legends Oval",
-          "length": 0,
-          "category": "oval",
-          "isFree": true
-        }
-      ]
-    },
-    {
       "id": "trk_550",
-      "name": "Charlotte Motor Speedway ",
+      "name": "Charlotte Motor Speedway",
       "price": 0,
       "category": "road",
       "isFree": true,
@@ -1759,6 +1742,14 @@
           "id": "cfg_556",
           "parentTrackId": "trk_550",
           "name": "Oval",
+          "length": 0,
+          "category": "oval",
+          "isFree": true
+        },
+        {
+          "id": "cfg_557",
+          "parentTrackId": "trk_550",
+          "name": "Legends Oval",
           "length": 0,
           "category": "oval",
           "isFree": true
