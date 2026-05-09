@@ -1,0 +1,3511 @@
+{
+  "_meta": {
+    "version": 1,
+    "generatedAt": "2026-05-09",
+    "note": "Hand-curated seed data. Prices and content subject to change. Replace with scraped pipeline output in Phase 2."
+  },
+  "cars": [
+    {
+      "id": "car_mx5_cup",
+      "name": "Mazda MX-5 Cup",
+      "price": 0,
+      "category": "sports_car",
+      "licenseClass": "R",
+      "isFree": true
+    },
+    {
+      "id": "car_global_mx5",
+      "name": "Global Mazda MX-5 Cup",
+      "price": 0,
+      "category": "sports_car",
+      "licenseClass": "D",
+      "isFree": true
+    },
+    {
+      "id": "car_skip_barber",
+      "name": "Skip Barber Formula 2000",
+      "price": 0,
+      "category": "formula_car",
+      "licenseClass": "D",
+      "isFree": true
+    },
+    {
+      "id": "car_arca_impala",
+      "name": "ARCA Menards Chevrolet Impala",
+      "price": 0,
+      "category": "oval",
+      "licenseClass": "D",
+      "isFree": true
+    },
+    {
+      "id": "car_porsche_cup",
+      "name": "Porsche 911 GT3 Cup (992)",
+      "price": 11.95,
+      "category": "sports_car",
+      "licenseClass": "C",
+      "isFree": false
+    },
+    {
+      "id": "car_ferrari_296",
+      "name": "Ferrari 296 GT3",
+      "price": 11.95,
+      "category": "sports_car",
+      "licenseClass": "B",
+      "isFree": false
+    },
+    {
+      "id": "car_dallara_p217",
+      "name": "Dallara P217 LMP2",
+      "price": 14.95,
+      "category": "sports_car",
+      "licenseClass": "A",
+      "isFree": false
+    },
+    {
+      "id": "car_nascar_truck",
+      "name": "NASCAR Truck (Next Gen)",
+      "price": 14.95,
+      "category": "oval",
+      "licenseClass": "C",
+      "isFree": false
+    },
+    {
+      "id": "car_fr35",
+      "name": "Formula Renault 3.5",
+      "price": 11.95,
+      "category": "formula_car",
+      "licenseClass": "B",
+      "isFree": false
+    },
+    {
+      "id": "car_dirt_lm",
+      "name": "Dirt Late Model (Pro)",
+      "price": 11.95,
+      "category": "dirt_oval",
+      "licenseClass": "D",
+      "isFree": false
+    }
+  ],
+  "tracks": [
+    {
+      "id": "trk_lime_rock",
+      "name": "Lime Rock Park",
+      "price": 0,
+      "category": "sports_car",
+      "isFree": true,
+      "configs": [
+        {
+          "id": "cfg_lime_rock_gp",
+          "parentTrackId": "trk_lime_rock",
+          "name": "Grand Prix",
+          "length": 2.46,
+          "category": "sports_car",
+          "isFree": true
+        },
+        {
+          "id": "cfg_lime_rock_classic",
+          "parentTrackId": "trk_lime_rock",
+          "name": "Classic",
+          "length": 2.41,
+          "category": "sports_car",
+          "isFree": true
+        },
+        {
+          "id": "cfg_lime_rock_chicane",
+          "parentTrackId": "trk_lime_rock",
+          "name": "Chicane",
+          "length": 2.51,
+          "category": "sports_car",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "trk_charlotte",
+      "name": "Charlotte Motor Speedway",
+      "price": 0,
+      "category": "oval",
+      "isFree": true,
+      "configs": [
+        {
+          "id": "cfg_charlotte_oval",
+          "parentTrackId": "trk_charlotte",
+          "name": "Oval",
+          "length": 2.41,
+          "category": "oval",
+          "isFree": true
+        },
+        {
+          "id": "cfg_charlotte_roval",
+          "parentTrackId": "trk_charlotte",
+          "name": "Roval",
+          "length": 3.69,
+          "category": "sports_car",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "trk_summit",
+      "name": "Summit Point Raceway",
+      "price": 0,
+      "category": "sports_car",
+      "isFree": true,
+      "configs": [
+        {
+          "id": "cfg_summit_main",
+          "parentTrackId": "trk_summit",
+          "name": "Main",
+          "length": 3.36,
+          "category": "sports_car",
+          "isFree": true
+        },
+        {
+          "id": "cfg_summit_shenandoah",
+          "parentTrackId": "trk_summit",
+          "name": "Shenandoah",
+          "length": 3.5,
+          "category": "sports_car",
+          "isFree": true
+        }
+      ]
+    },
+    {
+      "id": "trk_spa",
+      "name": "Circuit de Spa-Francorchamps",
+      "price": 14.95,
+      "category": "sports_car",
+      "isFree": false,
+      "configs": [
+        {
+          "id": "cfg_spa_gp",
+          "parentTrackId": "trk_spa",
+          "name": "Grand Prix Pits",
+          "length": 7,
+          "category": "sports_car",
+          "isFree": false
+        },
+        {
+          "id": "cfg_spa_classic",
+          "parentTrackId": "trk_spa",
+          "name": "Classic Pits",
+          "length": 7,
+          "category": "sports_car",
+          "isFree": false
+        }
+      ]
+    },
+    {
+      "id": "trk_nurb",
+      "name": "Nürburgring Combined",
+      "price": 14.95,
+      "category": "sports_car",
+      "isFree": false,
+      "configs": [
+        {
+          "id": "cfg_nurb_gp",
+          "parentTrackId": "trk_nurb",
+          "name": "Grand-Prix-Strecke",
+          "length": 5.14,
+          "category": "sports_car",
+          "isFree": false
+        },
+        {
+          "id": "cfg_nurb_nords",
+          "parentTrackId": "trk_nurb",
+          "name": "Nordschleife",
+          "length": 20.83,
+          "category": "sports_car",
+          "isFree": false
+        },
+        {
+          "id": "cfg_nurb_combined",
+          "parentTrackId": "trk_nurb",
+          "name": "24h Combined",
+          "length": 25.38,
+          "category": "sports_car",
+          "isFree": false
+        }
+      ]
+    },
+    {
+      "id": "trk_daytona",
+      "name": "Daytona International Speedway",
+      "price": 14.95,
+      "category": "oval",
+      "isFree": false,
+      "configs": [
+        {
+          "id": "cfg_daytona_oval",
+          "parentTrackId": "trk_daytona",
+          "name": "Oval",
+          "length": 4.02,
+          "category": "oval",
+          "isFree": false
+        },
+        {
+          "id": "cfg_daytona_road",
+          "parentTrackId": "trk_daytona",
+          "name": "Road Course",
+          "length": 5.73,
+          "category": "sports_car",
+          "isFree": false
+        }
+      ]
+    },
+    {
+      "id": "trk_watkins",
+      "name": "Watkins Glen International",
+      "price": 11.95,
+      "category": "sports_car",
+      "isFree": false,
+      "configs": [
+        {
+          "id": "cfg_watkins_boot",
+          "parentTrackId": "trk_watkins",
+          "name": "Boot",
+          "length": 5.43,
+          "category": "sports_car",
+          "isFree": false
+        },
+        {
+          "id": "cfg_watkins_cup",
+          "parentTrackId": "trk_watkins",
+          "name": "Cup",
+          "length": 3.97,
+          "category": "sports_car",
+          "isFree": false
+        }
+      ]
+    },
+    {
+      "id": "trk_road_america",
+      "name": "Road America",
+      "price": 14.95,
+      "category": "sports_car",
+      "isFree": false,
+      "configs": [
+        {
+          "id": "cfg_road_america_full",
+          "parentTrackId": "trk_road_america",
+          "name": "Full Course",
+          "length": 6.51,
+          "category": "sports_car",
+          "isFree": false
+        }
+      ]
+    },
+    {
+      "id": "trk_bristol",
+      "name": "Bristol Motor Speedway",
+      "price": 14.95,
+      "category": "oval",
+      "isFree": false,
+      "configs": [
+        {
+          "id": "cfg_bristol_oval",
+          "parentTrackId": "trk_bristol",
+          "name": "Oval",
+          "length": 0.86,
+          "category": "oval",
+          "isFree": false
+        },
+        {
+          "id": "cfg_bristol_dirt_oval",
+          "parentTrackId": "trk_bristol",
+          "name": "Dirt Oval",
+          "length": 0.86,
+          "category": "dirt_oval",
+          "isFree": false
+        }
+      ]
+    },
+    {
+      "id": "trk_long_beach",
+      "name": "Long Beach Street Circuit",
+      "price": 14.95,
+      "category": "sports_car",
+      "isFree": false,
+      "configs": [
+        {
+          "id": "cfg_long_beach_full",
+          "parentTrackId": "trk_long_beach",
+          "name": "Grand Prix",
+          "length": 3.17,
+          "category": "sports_car",
+          "isFree": false
+        }
+      ]
+    }
+  ],
+  "seasons": [
+    {
+      "id": "2024-S2",
+      "year": 2024,
+      "quarter": 2,
+      "current": false
+    },
+    {
+      "id": "2024-S3",
+      "year": 2024,
+      "quarter": 3,
+      "current": false
+    },
+    {
+      "id": "2024-S4",
+      "year": 2024,
+      "quarter": 4,
+      "current": false
+    },
+    {
+      "id": "2025-S1",
+      "year": 2025,
+      "quarter": 1,
+      "current": false
+    },
+    {
+      "id": "2025-S2",
+      "year": 2025,
+      "quarter": 2,
+      "current": false
+    },
+    {
+      "id": "2025-S3",
+      "year": 2025,
+      "quarter": 3,
+      "current": false
+    },
+    {
+      "id": "2025-S4",
+      "year": 2025,
+      "quarter": 4,
+      "current": false
+    },
+    {
+      "id": "2026-S1",
+      "year": 2026,
+      "quarter": 1,
+      "current": false
+    },
+    {
+      "id": "2026-S2",
+      "year": 2026,
+      "quarter": 2,
+      "current": true
+    }
+  ],
+  "series": [
+    {
+      "id": "ser_gt3_challenge",
+      "name": "GT3 Fanatec Challenge",
+      "category": "sports_car",
+      "licenseClass": "B",
+      "popularity": "flagship",
+      "weeks": [
+        {
+          "seasonId": "2026-S2",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 2,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 3,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 4,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 5,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 6,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 7,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 8,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 9,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 10,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 11,
+          "trackConfigId": "cfg_nurb_nords",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 12,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 4,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 5,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 4,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 5,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 3,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 4,
+          "trackConfigId": "cfg_nurb_nords",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 5,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 6,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 2,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 3,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 4,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 5,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 6,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 4,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 5,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 4,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 5,
+          "trackConfigId": "cfg_nurb_nords",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 6,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 7,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 8,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 4,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 5,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 6,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 7,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 8,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 3,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 4,
+          "trackConfigId": "cfg_nurb_nords",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 5,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 6,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_ferrari_296",
+            "car_porsche_cup"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ser_lmp2_proto",
+      "name": "LMP2 Prototype Series",
+      "category": "sports_car",
+      "licenseClass": "A",
+      "popularity": "high",
+      "weeks": [
+        {
+          "seasonId": "2026-S2",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 2,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 3,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 4,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 5,
+          "trackConfigId": "cfg_nurb_combined",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 6,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 7,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 8,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 9,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 10,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 11,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 12,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 4,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 5,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 4,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 5,
+          "trackConfigId": "cfg_nurb_combined",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 6,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 4,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 4,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 5,
+          "trackConfigId": "cfg_nurb_combined",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 6,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 7,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 3,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 4,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 4,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 5,
+          "trackConfigId": "cfg_nurb_combined",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 6,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 7,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 2,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 4,
+          "trackConfigId": "cfg_daytona_road",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 5,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 6,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 7,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 8,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 2,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 3,
+          "trackConfigId": "cfg_nurb_combined",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 4,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_dallara_p217"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ser_skip_barber",
+      "name": "Skip Barber Race Series",
+      "category": "formula_car",
+      "licenseClass": "D",
+      "popularity": "high",
+      "weeks": [
+        {
+          "seasonId": "2026-S2",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 2,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 3,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 4,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 5,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 6,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 7,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 8,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 9,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 10,
+          "trackConfigId": "cfg_lime_rock_chicane",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 11,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 12,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 4,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 5,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 6,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_chicane",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 4,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 5,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 6,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 4,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 3,
+          "trackConfigId": "cfg_lime_rock_chicane",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 4,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 5,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 6,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 4,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 5,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 6,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 7,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_chicane",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 4,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 5,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 4,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 5,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 6,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 3,
+          "trackConfigId": "cfg_lime_rock_chicane",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 4,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 5,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 6,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_skip_barber"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ser_mx5",
+      "name": "Mazda MX-5 Cup Series",
+      "category": "sports_car",
+      "licenseClass": "D",
+      "popularity": "flagship",
+      "weeks": [
+        {
+          "seasonId": "2026-S2",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 2,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 3,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 4,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 5,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 6,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 7,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 8,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 9,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 10,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 11,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 12,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 4,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 5,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 2,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 3,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 4,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 5,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 4,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 5,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 4,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 5,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 6,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 7,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 8,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 4,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 5,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 6,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 7,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 2,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 3,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 4,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 5,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 4,
+          "trackConfigId": "cfg_summit_shenandoah",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 5,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 6,
+          "trackConfigId": "cfg_charlotte_roval",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 7,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 1,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 2,
+          "trackConfigId": "cfg_lime_rock_classic",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 3,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 4,
+          "trackConfigId": "cfg_watkins_cup",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 5,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_global_mx5",
+            "car_mx5_cup"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ser_nascar_truck",
+      "name": "NASCAR Class B Truck Series",
+      "category": "oval",
+      "licenseClass": "C",
+      "popularity": "medium",
+      "weeks": [
+        {
+          "seasonId": "2026-S2",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 4,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 5,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 6,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 7,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 8,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 9,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 10,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 11,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 12,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_nascar_truck"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ser_arca",
+      "name": "ARCA Menards Series",
+      "category": "oval",
+      "licenseClass": "D",
+      "popularity": "medium",
+      "weeks": [
+        {
+          "seasonId": "2026-S2",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 4,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 5,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 6,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 7,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 8,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 9,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 10,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 11,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 12,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 1,
+          "trackConfigId": "cfg_daytona_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 2,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 1,
+          "trackConfigId": "cfg_charlotte_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 2,
+          "trackConfigId": "cfg_bristol_oval",
+          "carIds": [
+            "car_arca_impala"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ser_fr35",
+      "name": "Formula Renault 3.5 Championship",
+      "category": "formula_car",
+      "licenseClass": "B",
+      "popularity": "low",
+      "weeks": [
+        {
+          "seasonId": "2026-S2",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 2,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 4,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 5,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 6,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 7,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 8,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 9,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 10,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 11,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 12,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 2,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 4,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 2,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 3,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 2,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 3,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 2,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 4,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 5,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 2,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 3,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 2,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 3,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 4,
+          "trackConfigId": "cfg_lime_rock_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 2,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 3,
+          "trackConfigId": "cfg_road_america_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 4,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 1,
+          "trackConfigId": "cfg_spa_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 2,
+          "trackConfigId": "cfg_nurb_gp",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 3,
+          "trackConfigId": "cfg_watkins_boot",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 4,
+          "trackConfigId": "cfg_long_beach_full",
+          "carIds": [
+            "car_fr35"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 5,
+          "trackConfigId": "cfg_summit_main",
+          "carIds": [
+            "car_fr35"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ser_dirt_lm",
+      "name": "Dirt Late Model Tour",
+      "category": "dirt_oval",
+      "licenseClass": "D",
+      "popularity": "low",
+      "weeks": [
+        {
+          "seasonId": "2026-S2",
+          "week": 1,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 2,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 3,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 4,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 5,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 6,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 7,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 8,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 9,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 10,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 11,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S2",
+          "week": 12,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2024-S2",
+          "week": 1,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2024-S3",
+          "week": 1,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2024-S4",
+          "week": 1,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2025-S1",
+          "week": 1,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2025-S2",
+          "week": 1,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2025-S3",
+          "week": 1,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2025-S4",
+          "week": 1,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        },
+        {
+          "seasonId": "2026-S1",
+          "week": 1,
+          "trackConfigId": "cfg_bristol_dirt_oval",
+          "carIds": [
+            "car_dirt_lm"
+          ]
+        }
+      ]
+    }
+  ]
+}
