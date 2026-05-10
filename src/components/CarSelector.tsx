@@ -86,21 +86,34 @@ export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
             <div className="flex flex-wrap gap-2">
               {list.map((car) => {
                 const isOn = selected.has(car.id)
+                const baseClasses = 'text-left px-3 py-2 rounded-lg border text-sm transition '
+                const variant = isOn
+                  ? 'bg-accent/15 border-accent text-slate-100'
+                  : car.isFree
+                  ? 'bg-emerald-500/[0.06] border-emerald-500/30 hover:border-emerald-400/60 text-slate-200'
+                  : 'bg-ink border-edge hover:border-slate-600 text-slate-300'
                 return (
                   <button
                     key={car.id}
                     type="button"
                     onClick={() => onToggle(car.id)}
-                    className={
-                      'text-left px-3 py-2 rounded-lg border text-sm transition ' +
-                      (isOn
-                        ? 'bg-accent/15 border-accent text-slate-100'
-                        : 'bg-ink border-edge hover:border-slate-600 text-slate-300')
-                    }
+                    className={baseClasses + variant}
                   >
-                    <div className="font-medium">{car.name}</div>
+                    <div className="flex items-center gap-2">
+                      <span className="font-medium">{car.name}</span>
+                      {car.isFree && (
+                        <span className="px-1.5 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 text-[9px] uppercase tracking-wider font-semibold">
+                          Base
+                        </span>
+                      )}
+                    </div>
                     <div className="text-xs text-slate-400">
-                      {car.licenseClass}-class · {formatPrice(car.price)}
+                      {car.licenseClass}-class ·{' '}
+                      {car.isFree ? (
+                        <span className="text-emerald-300">Free</span>
+                      ) : (
+                        formatPrice(car.price)
+                      )}
                     </div>
                   </button>
                 )
