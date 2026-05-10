@@ -1,12 +1,39 @@
+import { useMemo, useState } from 'react'
 import type { SeriesMatch } from '../lib/series-finder'
 import { CATEGORY_LABEL } from '../lib/format'
+import { OwnershipFilter, type Ownership } from './OwnershipFilter'
 
 interface Props {
   matches: SeriesMatch[]
   selectedCount: number
 }
 
-export function SeriesList({ matches, selectedCount }: Props) {
+/** A series counts as "fully base" only if it actually runs this season AND
+ *  every upcoming track is base content. A series with no upcoming weeks is
+ *  not actionable, so we exclude it from both Base and Paid buckets and
+ *  only show it in 'all'. */
+function isFullyBase(m: SeriesMatch): boolean {
+  return m.upcomingTracks.length > 0 && m.paidUpcomingTracks.length === 0
+}
+function requiresPaid(m: SeriesMatch): boolean {
+  return m.paidUpcomingTracks.length > 0
+}
+function matches(m: SeriesMatch, o: Ownership): boolean {
+  if (o === 'all') return true
+  if (o === 'base') return isFullyBase(m)
+  return requiresPaid(m)
+}
+
+export function SeriesList({ matches: items, selectedCount }: Props) {
+  const [ownership, setOwnership] = useState<Ownership>('all')
+
+  const baseCount = useMemo(() => items.filter(isFullyBase).length, [items])
+  const paidCount = useMemo(() => items.filter(requiresPaid).length, [items])
+  const filtered = useMemo(
+    () => items.filter((m) => matches(m, ownership)),
+    [items, ownership],
+  )
+
   if (selectedCount === 0) {
     return (
       <section className="rounded-2xl bg-panel border border-edge p-8 text-center text-slate-400">
@@ -14,7 +41,7 @@ export function SeriesList({ matches, selectedCount }: Props) {
       </section>
     )
   }
-  if (matches.length === 0) {
+  if (items.length === 0) {
     return (
       <section className="rounded-2xl bg-panel border border-edge p-8 text-center text-slate-400">
         No series in the dataset use your selected car(s).
@@ -24,7 +51,7 @@ export function SeriesList({ matches, selectedCount }: Props) {
 
   return (
     <section className="rounded-2xl bg-panel border border-edge p-5">
-      <header className="flex items-center justify-between mb-4">
+      <header className="flex items-center justify-between mb-4 gap-3 flex-wrap">
         <div>
           <h2 className="text-lg font-semibold">Series for your cars</h2>
           <p className="text-sm text-slate-400">
@@ -32,11 +59,32 @@ export function SeriesList({ matches, selectedCount }: Props) {
             season's tracks.
           </p>
         </div>
-        <div className="text-sm text-slate-400">{matches.length} series</div>
+        <div className="text-sm text-slate-400">
+          {filtered.length === items.length
+            ? `${items.length} series`
+            : `${filtered.length} of ${items.length}`}
+        </div>
       </header>
 
+      <div className="flex flex-wrap items-center gap-x-2 gap-y-1 mb-4 text-xs text-slate-400">
+        <span>Show:</span>
+        <OwnershipFilter
+          value={ownership}
+          onChange={setOwnership}
+          labels={{ base: `Base (${baseCount})`, paid: `Paid (${paidCount})` }}
+        />
+        <span className="text-[11px] text-slate-500 ml-1">
+          Base = full schedule on base-content tracks · Paid = at least one paid track
+        </span>
+      </div>
+
+      {filtered.length === 0 ? (
+        <p className="text-sm text-slate-400 py-4 text-center">
+          No series match the current filter.
+        </p>
+      ) : (
       <ol className="space-y-3">
-        {matches.map((m) => (
+        {filtered.map((m) => (
           <li
             key={m.series.id}
             className="rounded-xl border border-edge bg-ink/60 p-4"
@@ -102,6 +150,7 @@ export function SeriesList({ matches, selectedCount }: Props) {
           </li>
         ))}
       </ol>
+      )}
     </section>
   )
 }
