@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react'
 import type { Car, Category } from '../types'
 import { CATEGORY_LABEL, formatPrice } from '../lib/format'
+import { OwnershipFilter, matchesOwnership, type Ownership } from './OwnershipFilter'
 
 interface Props {
   cars: Car[]
@@ -14,15 +15,19 @@ const CATEGORIES: Category[] = ['sports_car', 'formula_car', 'oval', 'dirt_oval'
 export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
   const [query, setQuery] = useState('')
   const [categoryFilter, setCategoryFilter] = useState<Category | 'all'>('all')
+  const [ownership, setOwnership] = useState<Ownership>('all')
 
   const filtered = useMemo(() => {
     const q = query.trim().toLowerCase()
     return cars.filter((c) => {
       if (categoryFilter !== 'all' && c.category !== categoryFilter) return false
+      if (!matchesOwnership(c, ownership)) return false
       if (q && !c.name.toLowerCase().includes(q)) return false
       return true
     })
-  }, [cars, query, categoryFilter])
+  }, [cars, query, categoryFilter, ownership])
+
+  const baseCount = useMemo(() => cars.filter((c) => c.isFree).length, [cars])
 
   const grouped = useMemo(() => {
     const m = new Map<Category, Car[]>()
@@ -57,7 +62,7 @@ export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
         </div>
       </header>
 
-      <div className="flex flex-wrap gap-2 mb-4">
+      <div className="flex flex-wrap items-center gap-2 mb-4">
         <input
           type="search"
           value={query}
@@ -75,6 +80,14 @@ export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
             <option key={c} value={c}>{CATEGORY_LABEL[c]}</option>
           ))}
         </select>
+      </div>
+      <div className="flex items-center gap-2 mb-4 text-xs text-slate-400">
+        <span>Show:</span>
+        <OwnershipFilter
+          value={ownership}
+          onChange={setOwnership}
+          labels={{ base: `Base (${baseCount})`, paid: `Paid (${cars.length - baseCount})` }}
+        />
       </div>
 
       <div className="space-y-4">

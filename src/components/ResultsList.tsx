@@ -1,5 +1,7 @@
+import { useMemo, useState } from 'react'
 import type { RankMode, TrackScore } from '../lib/recommend'
 import { formatPrice } from '../lib/format'
+import { OwnershipFilter, matchesOwnership, type Ownership } from './OwnershipFilter'
 
 interface Props {
   scores: TrackScore[]
@@ -13,6 +15,14 @@ const MODE_LABEL: Record<RankMode, string> = {
 }
 
 export function ResultsList({ scores, mode }: Props) {
+  const [ownership, setOwnership] = useState<Ownership>('all')
+
+  const baseCount = useMemo(() => scores.filter((s) => s.track.isFree).length, [scores])
+  const filtered = useMemo(
+    () => scores.filter((s) => matchesOwnership(s.track, ownership)),
+    [scores, ownership],
+  )
+
   if (scores.length === 0) {
     return (
       <section className="rounded-2xl bg-panel border border-edge p-8 text-center text-slate-400">
@@ -23,16 +33,34 @@ export function ResultsList({ scores, mode }: Props) {
 
   return (
     <section className="rounded-2xl bg-panel border border-edge p-5">
-      <header className="flex items-center justify-between mb-4">
+      <header className="flex items-center justify-between mb-4 gap-3 flex-wrap">
         <div>
           <h2 className="text-lg font-semibold">Recommended tracks</h2>
           <p className="text-sm text-slate-400">Sorted by: {MODE_LABEL[mode]}</p>
         </div>
-        <div className="text-sm text-slate-400">{scores.length} tracks</div>
+        <div className="text-sm text-slate-400">
+          {filtered.length === scores.length
+            ? `${scores.length} tracks`
+            : `${filtered.length} of ${scores.length}`}
+        </div>
       </header>
 
+      <div className="flex items-center gap-2 mb-4 text-xs text-slate-400">
+        <span>Show:</span>
+        <OwnershipFilter
+          value={ownership}
+          onChange={setOwnership}
+          labels={{ base: `Base (${baseCount})`, paid: `Paid (${scores.length - baseCount})` }}
+        />
+      </div>
+
+      {filtered.length === 0 ? (
+        <p className="text-sm text-slate-400 py-4 text-center">
+          No tracks match the current filter.
+        </p>
+      ) : (
       <ol className="space-y-3">
-        {scores.map((s, idx) => (
+        {filtered.map((s, idx) => (
           <li
             key={s.track.id}
             className={
@@ -129,6 +157,7 @@ export function ResultsList({ scores, mode }: Props) {
           </li>
         ))}
       </ol>
+      )}
     </section>
   )
 }
