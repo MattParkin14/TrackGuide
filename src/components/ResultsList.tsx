@@ -25,7 +25,7 @@ export function ResultsList({ scores, mode }: Props) {
 
   if (scores.length === 0) {
     return (
-      <section className="rounded-2xl bg-panel border border-edge p-8 text-center text-slate-400">
+      <section className="rounded-2xl bg-panel border border-edge p-8 text-center text-fg-muted">
         Pick at least one car on the left to see ranked track recommendations.
       </section>
     )
@@ -36,16 +36,16 @@ export function ResultsList({ scores, mode }: Props) {
       <header className="flex items-center justify-between mb-4 gap-3 flex-wrap">
         <div>
           <h2 className="text-lg font-semibold">Recommended tracks</h2>
-          <p className="text-sm text-slate-400">Sorted by: {MODE_LABEL[mode]}</p>
+          <p className="text-sm text-fg-muted">Sorted by: {MODE_LABEL[mode]}</p>
         </div>
-        <div className="text-sm text-slate-400">
+        <div className="text-sm text-fg-muted">
           {filtered.length === scores.length
             ? `${scores.length} tracks`
             : `${filtered.length} of ${scores.length}`}
         </div>
       </header>
 
-      <div className="flex items-center gap-2 mb-4 text-xs text-slate-400">
+      <div className="flex items-center gap-2 mb-4 text-xs text-fg-muted">
         <span>Show:</span>
         <OwnershipFilter
           value={ownership}
@@ -55,7 +55,7 @@ export function ResultsList({ scores, mode }: Props) {
       </div>
 
       {filtered.length === 0 ? (
-        <p className="text-sm text-slate-400 py-4 text-center">
+        <p className="text-sm text-fg-muted py-4 text-center">
           No tracks match the current filter.
         </p>
       ) : (
@@ -72,20 +72,20 @@ export function ResultsList({ scores, mode }: Props) {
           >
             <div className="flex items-start justify-between gap-3">
               <div className="flex items-center gap-3 min-w-0">
-                <span className="text-slate-500 text-sm font-mono shrink-0">
+                <span className="text-fg-dim text-sm font-mono shrink-0">
                   {String(idx + 1).padStart(2, '0')}
                 </span>
-                <h3 className="text-base font-semibold text-slate-100 truncate">
+                <h3 className="text-base font-semibold text-fg truncate">
                   {s.track.name}
                 </h3>
               </div>
               <div className="shrink-0">
                 {s.track.isFree ? (
-                  <span className="px-2 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 text-[10px] uppercase tracking-wider font-semibold whitespace-nowrap">
+                  <span className="px-2 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-700 dark:text-emerald-300 text-[10px] uppercase tracking-wider font-semibold whitespace-nowrap">
                     Base content
                   </span>
                 ) : (
-                  <span className="text-sm text-slate-300 font-medium">
+                  <span className="text-sm text-fg font-medium">
                     {formatPrice(s.track.price)}
                   </span>
                 )}
@@ -95,18 +95,18 @@ export function ResultsList({ scores, mode }: Props) {
             <dl className="mt-3 grid grid-cols-[5.5rem,1fr] gap-x-3 gap-y-1.5 text-xs">
               {s.matchingConfigs.length > 0 && (
                 <>
-                  <dt className="text-[10px] uppercase tracking-wider text-slate-500 pt-0.5">
+                  <dt className="text-[10px] uppercase tracking-wider text-fg-dim pt-0.5">
                     Configs
                   </dt>
-                  <dd className="text-slate-300 flex flex-wrap gap-1.5">
+                  <dd className="text-fg flex flex-wrap gap-1.5">
                     {s.matchingConfigs.map((c) => (
                       <span
                         key={c.id}
                         className={
                           'px-1.5 py-0.5 rounded border text-[11px] ' +
                           (c.isFree && !s.track.isFree
-                            ? 'bg-emerald-500/10 border-emerald-500/40 text-emerald-200'
-                            : 'bg-panel border-edge text-slate-300')
+                            ? 'bg-emerald-500/10 border-emerald-500/40 text-emerald-800 dark:text-emerald-200'
+                            : 'bg-panel border-edge text-fg')
                         }
                       >
                         {c.name}
@@ -117,14 +117,14 @@ export function ResultsList({ scores, mode }: Props) {
               )}
               {s.upcomingSeriesNames.length > 0 && (
                 <>
-                  <dt className="text-[10px] uppercase tracking-wider text-slate-500 pt-0.5">
+                  <dt className="text-[10px] uppercase tracking-wider text-fg-dim pt-0.5">
                     Series
                   </dt>
-                  <dd className="text-slate-300 flex flex-wrap gap-1.5">
+                  <dd className="text-fg flex flex-wrap gap-1.5">
                     {s.upcomingSeriesNames.map((name) => (
                       <span
                         key={name}
-                        className="px-1.5 py-0.5 rounded border border-edge bg-panel text-[11px] text-slate-300"
+                        className="px-1.5 py-0.5 rounded border border-edge bg-panel text-[11px] text-fg"
                       >
                         {name}
                       </span>
@@ -182,13 +182,13 @@ function Stat({
           : 'bg-panel/60 border-edge')
       }
     >
-      <div className={'text-base font-semibold leading-none ' + (emphasized ? 'text-accent' : 'text-slate-100')}>
+      <div className={'text-base font-semibold leading-none ' + (emphasized ? 'text-accent' : 'text-fg')}>
         {value}
       </div>
-      <div className="text-[10px] uppercase tracking-wider text-slate-400 mt-1.5">
+      <div className="text-[10px] uppercase tracking-wider text-fg-muted mt-1.5">
         {label}
       </div>
-      <div className="text-[9px] text-slate-500">{sub}</div>
+      <div className="text-[9px] text-fg-dim">{sub}</div>
     </div>
   )
 }

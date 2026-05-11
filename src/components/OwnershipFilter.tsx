@@ -34,9 +34,9 @@ export function OwnershipFilter({ value, onChange, labels }: Props) {
               'px-2.5 py-1 rounded-md transition ' +
               (active
                 ? opt.value === 'base'
-                  ? 'bg-emerald-500/15 text-emerald-200 border border-emerald-500/40'
+                  ? 'bg-emerald-500/15 text-emerald-800 dark:text-emerald-200 border border-emerald-500/40'
                   : 'bg-accent/15 text-accent border border-accent/40'
-                : 'text-slate-400 hover:text-slate-200 border border-transparent')
+                : 'text-fg-muted hover:text-fg border border-transparent')
             }
           >
             {display}

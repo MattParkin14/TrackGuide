@@ -3,6 +3,7 @@ import type { Dataset } from './types'
 import { loadDataset } from './lib/dataset'
 import { rankTracks, type RankMode } from './lib/recommend'
 import { findSeriesForCars } from './lib/series-finder'
+import { useTheme } from './lib/theme'
 import { CarSelector } from './components/CarSelector'
 import { ResultsList } from './components/ResultsList'
 import { SeriesList } from './components/SeriesList'
@@ -33,6 +34,7 @@ export function App() {
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [mode, setMode] = useState<RankMode>('weeks')
   const [view, setView] = useState<View>('tracks')
+  const { theme, toggle: toggleTheme } = useTheme()
 
   useEffect(() => {
     let cancelled = false
@@ -73,30 +75,41 @@ export function App() {
             <h1 className="text-xl font-bold tracking-tight">
               <span className="text-accent">Track</span>Guide
             </h1>
-            <span className="text-xs text-slate-400 hidden sm:inline">
+            <span className="text-xs text-fg-muted hidden sm:inline">
               iRacing track recommender
             </span>
           </div>
-          {view === 'tracks' && (
-            <div className="flex items-center gap-2">
-              <label htmlFor="rank-mode" className="text-xs text-slate-400 hidden sm:inline">
-                Rank by:
-              </label>
-              <select
-                id="rank-mode"
-                value={mode}
-                onChange={(e) => setMode(e.target.value as RankMode)}
-                className="bg-ink border border-edge rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-accent"
-              >
-                {RANK_MODES.map((m) => (
-                  <option key={m.value} value={m.value}>{m.label}</option>
-                ))}
-              </select>
-            </div>
-          )}
+          <div className="flex items-center gap-2">
+            {view === 'tracks' && (
+              <>
+                <label htmlFor="rank-mode" className="text-xs text-fg-muted hidden sm:inline">
+                  Rank by:
+                </label>
+                <select
+                  id="rank-mode"
+                  value={mode}
+                  onChange={(e) => setMode(e.target.value as RankMode)}
+                  className="bg-ink border border-edge rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-accent"
+                >
+                  {RANK_MODES.map((m) => (
+                    <option key={m.value} value={m.value}>{m.label}</option>
+                  ))}
+                </select>
+              </>
+            )}
+            <button
+              type="button"
+              onClick={toggleTheme}
+              aria-label={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              title={theme === 'dark' ? 'Switch to light mode' : 'Switch to dark mode'}
+              className="rounded-lg border border-edge bg-ink hover:border-accent/60 text-fg p-2 transition"
+            >
+              {theme === 'dark' ? <SunIcon /> : <MoonIcon />}
+            </button>
+          </div>
         </div>
         {view === 'tracks' && modeHelper && (
-          <div className="max-w-6xl mx-auto px-5 pb-3 -mt-1 text-xs text-slate-500">
+          <div className="max-w-6xl mx-auto px-5 pb-3 -mt-1 text-xs text-fg-dim">
             {modeHelper}
           </div>
         )}
@@ -104,12 +117,12 @@ export function App() {
 
       <main className="max-w-6xl mx-auto px-5 py-6 grid lg:grid-cols-2 gap-5">
         {error && (
-          <div className="lg:col-span-2 rounded-xl border border-red-500/40 bg-red-500/10 text-red-200 p-4 text-sm">
+          <div className="lg:col-span-2 rounded-xl border border-red-500/40 bg-red-500/10 text-red-700 dark:text-red-200 p-4 text-sm">
             Failed to load data: {error}
           </div>
         )}
         {!dataset && !error && (
-          <div className="lg:col-span-2 text-center text-slate-400 py-20">Loading…</div>
+          <div className="lg:col-span-2 text-center text-fg-muted py-20">Loading…</div>
         )}
         {dataset && (
           <>
@@ -142,14 +155,14 @@ export function App() {
         )}
       </main>
 
-      <footer className="max-w-6xl mx-auto px-5 py-8 text-xs text-slate-500 space-y-1">
+      <footer className="max-w-6xl mx-auto px-5 py-8 text-xs text-fg-dim space-y-1">
         <p>
           Schedule and catalog data sourced from{' '}
           <a
             href="https://github.com/adrianulima/my-racing-planner"
             target="_blank"
             rel="noreferrer"
-            className="underline hover:text-slate-300"
+            className="underline hover:text-fg"
           >
             adrianulima/my-racing-planner
           </a>{' '}
@@ -183,10 +196,27 @@ function TabButton({
         'px-3 py-1.5 rounded-md text-sm transition ' +
         (active
           ? 'bg-ink text-accent border border-accent/40'
-          : 'text-slate-400 hover:text-slate-200')
+          : 'text-fg-muted hover:text-fg')
       }
     >
       {children}
     </button>
+  )
+}
+
+function SunIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41" />
+    </svg>
+  )
+}
+
+function MoonIcon() {
+  return (
+    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+    </svg>
   )
 }

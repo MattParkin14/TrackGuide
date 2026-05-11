@@ -44,17 +44,17 @@ export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
       <header className="flex items-center justify-between gap-3 mb-4">
         <div>
           <h2 className="text-lg font-semibold">Pick the cars you race</h2>
-          <p className="text-sm text-slate-400">
+          <p className="text-sm text-fg-muted">
             Multi-select. We rank tracks by what unlocks the most action for these cars.
           </p>
         </div>
-        <div className="text-sm text-slate-400">
+        <div className="text-sm text-fg-muted">
           <span className="text-accent font-semibold">{selected.size}</span> selected
           {selected.size > 0 && (
             <button
               type="button"
               onClick={onClear}
-              className="ml-3 text-slate-400 hover:text-slate-200 underline-offset-2 hover:underline"
+              className="ml-3 text-fg-muted hover:text-fg underline-offset-2 hover:underline"
             >
               clear
             </button>
@@ -68,7 +68,7 @@ export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
           value={query}
           onChange={(e) => setQuery(e.target.value)}
           placeholder="Search cars..."
-          className="flex-1 min-w-[12rem] bg-ink border border-edge rounded-lg px-3 py-2 text-sm placeholder:text-slate-500 focus:outline-none focus:border-accent"
+          className="flex-1 min-w-[12rem] bg-ink border border-edge rounded-lg px-3 py-2 text-sm placeholder:text-fg-dim focus:outline-none focus:border-accent"
         />
         <select
           value={categoryFilter}
@@ -81,7 +81,7 @@ export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
           ))}
         </select>
       </div>
-      <div className="flex items-center gap-2 mb-4 text-xs text-slate-400">
+      <div className="flex items-center gap-2 mb-4 text-xs text-fg-muted">
         <span>Show:</span>
         <OwnershipFilter
           value={ownership}
@@ -93,7 +93,7 @@ export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
       <div className="space-y-4">
         {[...grouped.entries()].map(([cat, list]) => (
           <div key={cat}>
-            <h3 className="text-xs uppercase tracking-wider text-slate-400 mb-2">
+            <h3 className="text-xs uppercase tracking-wider text-fg-muted mb-2">
               {CATEGORY_LABEL[cat]}
             </h3>
             <div className="flex flex-wrap gap-2">
@@ -101,10 +101,10 @@ export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
                 const isOn = selected.has(car.id)
                 const baseClasses = 'text-left px-3 py-2 rounded-lg border text-sm transition '
                 const variant = isOn
-                  ? 'bg-accent/15 border-accent text-slate-100'
+                  ? 'bg-accent/15 border-accent text-fg'
                   : car.isFree
-                  ? 'bg-emerald-500/[0.06] border-emerald-500/30 hover:border-emerald-400/60 text-slate-200'
-                  : 'bg-ink border-edge hover:border-slate-600 text-slate-300'
+                  ? 'bg-emerald-500/[0.06] border-emerald-500/30 hover:border-emerald-400/60 text-fg'
+                  : 'bg-ink border-edge hover:border-edge text-fg'
                 return (
                   <button
                     key={car.id}
@@ -115,15 +115,15 @@ export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
                     <div className="flex items-center gap-2">
                       <span className="font-medium">{car.name}</span>
                       {car.isFree && (
-                        <span className="px-1.5 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-300 text-[9px] uppercase tracking-wider font-semibold">
+                        <span className="px-1.5 py-0.5 rounded bg-emerald-500/15 border border-emerald-500/40 text-emerald-700 dark:text-emerald-300 text-[9px] uppercase tracking-wider font-semibold">
                           Base
                         </span>
                       )}
                     </div>
-                    <div className="text-xs text-slate-400">
+                    <div className="text-xs text-fg-muted">
                       {car.licenseClass}-class ·{' '}
                       {car.isFree ? (
-                        <span className="text-emerald-300">Free</span>
+                        <span className="text-emerald-700 dark:text-emerald-300">Free</span>
                       ) : (
                         formatPrice(car.price)
                       )}
@@ -135,7 +135,7 @@ export function CarSelector({ cars, selected, onToggle, onClear }: Props) {
           </div>
         ))}
         {filtered.length === 0 && (
-          <p className="text-sm text-slate-400">No cars match your filter.</p>
+          <p className="text-sm text-fg-muted">No cars match your filter.</p>
         )}
       </div>
     </section>
