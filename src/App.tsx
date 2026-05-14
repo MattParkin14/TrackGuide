@@ -4,6 +4,7 @@ import { loadDataset } from './lib/dataset'
 import { rankTracks, type RankMode } from './lib/recommend'
 import { findSeriesForCars } from './lib/series-finder'
 import { useTheme } from './lib/theme'
+import { track } from './lib/analytics'
 import { CarSelector } from './components/CarSelector'
 import { ResultsList } from './components/ResultsList'
 import { SeriesList } from './components/SeriesList'
@@ -34,6 +35,16 @@ export function App() {
   const [selected, setSelected] = useState<Set<string>>(new Set())
   const [mode, setMode] = useState<RankMode>('weeks')
   const [view, setView] = useState<View>('tracks')
+
+  const changeMode = (next: RankMode) => {
+    track('rank_mode_changed', { mode: next })
+    setMode(next)
+  }
+
+  const changeView = (next: View) => {
+    track('view_changed', { view: next })
+    setView(next)
+  }
   const { theme, toggle: toggleTheme } = useTheme()
 
   useEffect(() => {
@@ -57,13 +68,19 @@ export function App() {
   const toggle = (carId: string) => {
     setSelected((prev) => {
       const next = new Set(prev)
-      if (next.has(carId)) next.delete(carId)
+      const action = next.has(carId) ? 'remove' : 'add'
+      if (action === 'remove') next.delete(carId)
       else next.add(carId)
+      const car = dataset?.cars.find((c) => c.id === carId)
+      track('car_toggled', { car_id: carId, car_name: car?.name ?? carId, action })
       return next
     })
   }
 
-  const clear = () => setSelected(new Set())
+  const clear = () => {
+    track('cars_cleared', { previous_count: selected.size })
+    setSelected(new Set())
+  }
 
   const modeHelper = RANK_MODES.find((m) => m.value === mode)?.helper
 
@@ -88,7 +105,7 @@ export function App() {
                 <select
                   id="rank-mode"
                   value={mode}
-                  onChange={(e) => setMode(e.target.value as RankMode)}
+                  onChange={(e) => changeMode(e.target.value as RankMode)}
                   className="bg-ink border border-edge rounded-lg px-3 py-2 text-sm focus:outline-none focus:border-accent"
                 >
                   {RANK_MODES.map((m) => (
@@ -138,10 +155,10 @@ export function App() {
                 aria-label="Result view"
                 className="inline-flex rounded-lg border border-edge bg-panel p-1 self-start"
               >
-                <TabButton active={view === 'tracks'} onClick={() => setView('tracks')}>
+                <TabButton active={view === 'tracks'} onClick={() => changeView('tracks')}>
                   Tracks to buy
                 </TabButton>
-                <TabButton active={view === 'series'} onClick={() => setView('series')}>
+                <TabButton active={view === 'series'} onClick={() => changeView('series')}>
                   Series for my cars
                 </TabButton>
               </div>
