@@ -1,6 +1,7 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "trackguide",
+  "main": "src/worker.ts",
   "compatibility_date": "2026-05-09",
   "observability": {
     "enabled": true
