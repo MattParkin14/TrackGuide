@@ -12,9 +12,13 @@ export default {
         headers: {
           'Content-Type': 'text/plain; charset=utf-8',
           'Cache-Control': 'public, max-age=86400',
+          'X-Worker': 'active',
         },
       })
     }
-    return env.ASSETS.fetch(request)
+    const response = await env.ASSETS.fetch(request)
+    const next = new Response(response.body, response)
+    next.headers.set('X-Worker', 'active')
+    return next
   },
 }
