@@ -1,3 +1,4 @@
+/// <reference types="vite/client" />
 import type { Dataset } from '../types'
 
 export async function loadDataset(): Promise<Dataset> {
