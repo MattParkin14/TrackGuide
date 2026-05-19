@@ -1,11 +1,19 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "trackguide",
+  "main": "src/worker.ts",
   "compatibility_date": "2026-05-09",
   "observability": {
     "enabled": true
   },
+  "routes": [
+    {
+      "pattern": "projects101.co.nz/trackguide/*",
+      "zone_name": "projects101.co.nz"
+    }
+  ],
   "assets": {
+    "binding": "ASSETS",
     "not_found_handling": "single-page-application"
   },
   "compatibility_flags": [
